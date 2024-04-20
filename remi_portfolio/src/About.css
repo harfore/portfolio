@@ -1,0 +1,13 @@
+body {
+    margin: auto;
+    width: 80%;
+}
+
+#presentation_paragraph {
+    width: 50%;
+    height: auto;
+}
+
+.wLink {
+    width: 1rem;
+}
