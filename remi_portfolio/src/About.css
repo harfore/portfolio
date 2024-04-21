@@ -9,5 +9,12 @@ body {
 }
 
 .wLink {
-    width: 1rem;
+    width: 3.5rem;
+    padding: 2rem;
+    transition: margin 0.6s ease;
+}
+
+.wLink:hover {
+    color: green;
+    margin-bottom: 2rem;
 }

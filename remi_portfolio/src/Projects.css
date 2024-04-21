@@ -16,6 +16,16 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
+.group_project_image {
+    width: 27rem;
+}
+
+@media (max-width: 600px) {
+    .groupProjects .groupProject {
+        flex: 1 0 100%;
+    }
+}
+
 .personalProjects {
     display: flex;
     flex-wrap: wrap;

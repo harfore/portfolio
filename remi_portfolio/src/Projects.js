@@ -1,12 +1,16 @@
 import React from 'react';
 import './Projects.css';
+import chaises_volantes from './images/chaises_volantes.png';
+import social_network from './images/social_network.png';
+import distractor from './images/distractor.png';
+import happy_project from './images/happy_project.png';
 
 export function Projects() {
 
     const GroupProjects = [
         {
             title: "Les Chaises Volantes",
-            image: "../images/chaises_volantes.png",
+            image: chaises_volantes,
             technos: "React, Tailwind, HTML, Express, Node.js",
             description: "Find your next favorite furniture item with this dynamic platform displaying a wide variety of items.",
             githubLink: "https://github.com/harfore/Chaises-Volantes",
@@ -14,21 +18,21 @@ export function Projects() {
         },
         {
             title: "Social Network",
-            image: "../images/social_network.png",
+            image: social_network,
             technos: "HTML, CSS, PHP, MySQL, MariaDB",
             description: "This social network is a platform that allows users to register and login. They can explore the different pages, like posts and follow users but they can also post messages.",
             githubLink: "https://github.com/harfore/Social-Network"
         },
         {
             title: "The Distractor",
-            imges: "../images/distractor.png",
+            image: distractor,
             technos: "HTML, CSS, JavaScript, Chrome storage",
             description: "Need a quick break from your work ? We offer numerous, captivating distractions on demand in the shape of a pop-up window.",
             githubLink: "https://github.com/harfore/Distractor"
         },
         {
             title: "Happy Project",
-            image: "../images/happy_project.png",
+            image: happy_project,
             technos: "HTML, CSS, JavaScript, Jikan API, Postman",
             description: "Find your next favorite anime series after taking a quick personality test.",
             githubLink: "https://github.com/harfore/HAPPY-PROJECT",
@@ -69,7 +73,7 @@ export function Projects() {
                 {GroupProjects.map((GroupProject, index) => (
                     <div className='groupProject' key={index}>
                         <h2>{GroupProject.title}</h2>
-                        <img src={GroupProject.image} alt='' />
+                        <img className='group_project_image' src={GroupProject.image} alt='' />
                         <p>{GroupProject.description}</p>
                         <p>Languages and tools: {GroupProject.technos}</p>
                         <a href={GroupProject.githubLink} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>View on GitHub</button></a>
