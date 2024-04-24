@@ -31,29 +31,29 @@ export function Resume() {
     ]
 
     return (
-        <div>
+        <div id='resume_page'>
             <h1>Education</h1>
             <div id="education" >
                 {Education.map((School, index) => (
                     <div className='school' key={index}>
-                        <h2>{School.title}</h2>
+                        <h2 className='description'>{School.title}</h2>
                         <h2>{School.years}</h2>
                         <p>{School.place}</p>
                         <h3>{School.diploma}</h3>
-                        <p>{School.info1}</p>
-                        <p>{School.info2}</p>
+                        <p className='description'>{School.info1}</p>
+                        <p className='description'>{School.info2}</p>
                     </div>
                 ))}
             </div>
             <h1>Professional Experience</h1>
-            <div>
-                <h2>Assistance Coordinator - Night Shift</h2>
+            <div class="experience">
+                <h2 className='description'>Assistance Coordinator - Night Shift</h2>
                 <h2>June - September 2022 & 2023</h2>
                 <h2>AXA Assistance</h2>
-                <p>Telephone communications: answering queries from customers traveling in France
+                <p className='description'>Telephone communications: answering queries from customers traveling in France
                     and abroad</p>
-                <p>Teamwork to find creative solutions to logistical problems</p>
-                <p>Software use, file creation to leave an exhaustive paper trail</p>
+                <p className='description' >Teamwork to find creative solutions to logistical problems</p>
+                <p className='description' >Software use, file creation to leave an exhaustive paper trail</p>
             </div>
         </div>
 

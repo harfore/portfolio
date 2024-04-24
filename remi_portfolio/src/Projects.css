@@ -1,3 +1,8 @@
+#projects_page {
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
 .groupProjects {
     display: flex;
     flex-wrap: wrap;
@@ -5,14 +10,14 @@
 
 .groupProjects>.groupProject {
     flex: 1 0 35%;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     width: 4rem;
     margin: 2rem;
 }
 
 .groupProject:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: rgb(43, 43, 43);
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -33,15 +38,19 @@
 
 .personalProjects>.personalProject {
     flex: 1 0 35%;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     width: 4rem;
     margin: 2rem;
 }
 
 .personalProject:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: rgb(43, 43, 43);
     transition: background-color 0.5s, color 0.5s;
+}
+
+.project_description {
+    padding: 0 2rem 0;
 }
 
 .projectButton {
@@ -51,10 +60,12 @@
     font-weight: bold;
     padding: 1rem;
     overflow: hidden;
+    margin: 1rem 1rem;
+    vertical-align: top;
 }
 
 .projectButton:hover {
-    background-color: rgb(11, 192, 87);
-    color: white;
-    transition: background-color 0.5s, color 0.5s;
+    color: rgb(43, 43, 43);
+    width: 9rem;
+    transition: width 0.3s;
 }

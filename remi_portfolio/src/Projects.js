@@ -26,7 +26,7 @@ export function Projects() {
         {
             title: "The Distractor",
             image: distractor,
-            technos: "HTML, CSS, JavaScript, Chrome storage",
+            technos: "HTML, CSS, JavaScript, Chrome Storage",
             description: "Need a quick break from your work ? We offer numerous, captivating distractions on demand in the shape of a pop-up window.",
             githubLink: "https://github.com/harfore/Distractor"
         },
@@ -67,14 +67,14 @@ export function Projects() {
     }
 
     return (
-        <div>
+        <div id='projects_page'>
             <h1>Group Projects</h1>
             <div className="groupProjects">
                 {GroupProjects.map((GroupProject, index) => (
                     <div className='groupProject' key={index}>
                         <h2>{GroupProject.title}</h2>
                         <img className='group_project_image' src={GroupProject.image} alt='' />
-                        <p>{GroupProject.description}</p>
+                        <p className='project_description'>{GroupProject.description}</p>
                         <p>Languages and tools: {GroupProject.technos}</p>
                         <a href={GroupProject.githubLink} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>View on GitHub</button></a>
                         {ifLiveDemo(GroupProject)}
@@ -87,7 +87,7 @@ export function Projects() {
                     <div className='personalProject' key={index}>
                         <h2>{PersonalProject.title}</h2>
                         <img src={PersonalProject.image} alt='' />
-                        <p>{PersonalProject.description}</p>
+                        <p className='project_description' >{PersonalProject.description}</p>
                         <p>{PersonalProject.technos}</p>
                         <a href={PersonalProject.githubLink} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>View on Github</button></a>
                         <a href={PersonalProject.liveDemo} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>Live Demo</button></a>
