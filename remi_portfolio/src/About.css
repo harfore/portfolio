@@ -1,31 +1,41 @@
 #about_page {
     background-color: rgb(43, 43, 43);
     color: white;
-    background: url(./images/mesh-gradient.png)
+    background: url(./images/mesh-gradient.png);
+    padding: 1rem;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body {
     margin: auto;
-    width: 80%;
 }
 
 .about_image {
-    padding: 3rem 1rem 1rem 50rem;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0 1vw;
 }
 
 .presentation_paragraph {
-    width: 50%;
+    width: 100%;
+    max-width: 40rem;
+    font-size: 1.2rem;
     height: auto;
+    padding-bottom: 9rem;
+    margin: auto 5rem;
 }
 
 .typewriter {
+    font-size: 2rem;
     overflow: hidden;
-    border-right: .15em solid rgb(75, 135, 221);
+    border-right: 0.15em solid rgb(75, 135, 221);
     white-space: nowrap;
-    margin: 2rem 50rem 2rem 3rem;
-    letter-spacing: .15em;
+    margin: 2vw auto;
+    letter-spacing: 0.15em;
     animation:
-        typing 3.5s steps(40, end),
+        typing 4.2s steps(40, end),
         blink-caret .75s step-end infinite;
 }
 
@@ -64,9 +74,10 @@ body {
     position: relative;
     transition: top 0.4s ease;
     top: 0;
+    max-width: 100%;
 }
 
 .wLink:hover {
     color: rgb(133, 133, 133);
-    top: -1rem;
+    top: -1vw;
 }

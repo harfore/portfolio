@@ -3,16 +3,18 @@
     color: white;
 }
 
-.groupProjects {
+.groupProjects,
+.personalProjects {
     display: flex;
     flex-wrap: wrap;
 }
 
-.groupProjects>.groupProject {
+.groupProjects>.groupProject,
+.personalProjects>.personalProject {
     flex: 1 0 35%;
     border: 1px solid rgb(255, 255, 255);
-    width: 4rem;
     margin: 2rem;
+    min-width: 300px;
 }
 
 .groupProject:hover {
@@ -21,26 +23,26 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
-.group_project_image {
-    width: 27rem;
+.group_project_image,
+.personal_project_image {
+    width: 100%;
+    max-width: 27rem;
 }
 
-@media (max-width: 600px) {
-    .groupProjects .groupProject {
-        flex: 1 0 100%;
+@media (max-width: 900px) {
+
+    .groupProjects>.groupProject,
+    .personalProjects>.personalProject {
+        flex: 1 0 50%;
     }
 }
 
-.personalProjects {
-    display: flex;
-    flex-wrap: wrap;
-}
+@media (max-width: 600px) {
 
-.personalProjects>.personalProject {
-    flex: 1 0 35%;
-    border: 1px solid rgb(255, 255, 255);
-    width: 4rem;
-    margin: 2rem;
+    .groupProjects .groupProject,
+    .personalProjects>.personalProject {
+        flex: 1 0 100%;
+    }
 }
 
 .personalProject:hover {
@@ -50,7 +52,7 @@
 }
 
 .project_description {
-    padding: 0 2rem 0;
+    padding: 0 2rem;
 }
 
 .projectButton {

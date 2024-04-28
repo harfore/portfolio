@@ -22,7 +22,7 @@
 .footer nav a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: rgb(75, 135, 221);
 }
 
 .footer nav a:hover {
@@ -32,6 +32,7 @@
 
 .wLink {
     width: 5rem;
+    max-width: 100%;
 }
 
 #back {
