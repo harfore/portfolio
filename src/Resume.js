@@ -7,7 +7,7 @@ export function Resume() {
             title: "Computer Science - Bachelor's Degree",
             place_and_years: "2023 - 2025, Ada Tech School - 75010 Paris",
             place: "Ada Tech School - 75010 Paris",
-            diploma: "RNCP Level VI Diploma- Application Designer and Developer",
+            diploma: "RNCP Level VI Diploma - Application Designer and Developer",
             info1: "",
             info2: ""
 
@@ -20,18 +20,18 @@ export function Resume() {
             info2: "Last semester: Erasmus Exchange in Prague's Czech University of Life Sciences"
         },
         {
-            title: "Sainte Elisabeth High School",
-            place_and_years: "2017 - 2020, Paris",
-            diploma: "Economic and Social High School Diploma, awarded with high honors",
-            info1: "Class Delegate for student life (2018 - 2019)"
-        },
-        {
             title: "British Council",
             place_and_years: "2009 - 2019, Paris",
             place: "Paris",
             diploma: "Cambridge Advanced English (CAE) Diploma",
             info1: "Score: 200/210 (C2 Level)",
             info2: "Learning the English language"
+        },
+        {
+            title: "Sainte Elisabeth High School",
+            place_and_years: "2017 - 2020, Paris",
+            diploma: "Economic and Social High School Diploma, awarded with high honors",
+            info1: "Class Delegate for student life (2018 - 2019)"
         }
     ]
 
