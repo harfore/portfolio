@@ -21,7 +21,7 @@
 }
 
 .header nav a:hover {
-    color: black;
+    color: rgb(75, 135, 221);
     transition: background-color 0.4s, color 0.4s;
 }
 
