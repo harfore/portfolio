@@ -42,7 +42,7 @@ export function Projects() {
 
     const PersonalProjects = [
         {
-            title: "Hyperfunk",
+            title: "Hyperfunk - in progress",
             image: "../images/hyperfunk.png",
             technos: "HTML, CSS, JavaScript, Ticketmaster API, Postman",
             description: "A learning student project, Hyperfunk aims to present concerts and connect live music amateurs all over the globe. Users will soon be able to set up a profile, view the world's most popular tours and look through the nearest upcoming events.",
