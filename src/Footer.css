@@ -9,11 +9,6 @@
     display: flex;
 }
 
-.footer nav ul {
-    list-style: none;
-    display: flex;
-}
-
 .footer nav li {
     margin: 0 1rem;
     padding: 0.5rem 2rem;
