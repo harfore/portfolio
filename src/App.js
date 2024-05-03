@@ -7,6 +7,7 @@ import { Projects } from './Projects';
 import { Resume } from './Resume';
 
 function App() {
+  const test = ""
   return (
     <div className="App">
       <Header />
