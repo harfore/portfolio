@@ -3,7 +3,6 @@ import './Footer.css';
 import github from './images/github.png';
 import linkedin from './images/linkedin.png';
 import mail from './images/mail.png';
-import gsap from 'gsap';
 
 export function Footer() {
 
