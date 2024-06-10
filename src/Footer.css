@@ -7,10 +7,11 @@
 .footer nav ul {
     list-style: none;
     display: flex;
+    margin: auto;
 }
 
 .footer nav li {
-    margin: 0 1rem;
+    align-items: center;
     padding: 0.5rem 2rem;
 }
 
