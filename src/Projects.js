@@ -4,8 +4,35 @@ import chaises_volantes from './images/chaises_volantes.png';
 import social_network from './images/social_network.png';
 import distractor from './images/distractor.png';
 import happy_project from './images/happy_project.png';
+import hyperfunk from './images/hyperfunk.png';
+import portfolio_image from './images/portfolio_image.png';
 
 export function Projects() {
+
+    const PersonalProjects = [
+        {
+            title: "Hyperfunk - in progress",
+            image: hyperfunk,
+            technos: "HTML, CSS, JavaScript, Ticketmaster API, Postman",
+            description: "A learning student project, Hyperfunk aims to present concerts and connect live music amateurs all over the globe. Users will soon be able to set up a profile, view the world's most popular tours and look through the nearest upcoming events.",
+            githubLink: "https://github.com/harfore/hyperfunk",
+            liveDemo: "https://harfore.github.io/hyperfunk/"
+        },
+        {
+            title: "Portfolio",
+            image: portfolio_image,
+            technos: "React",
+            description: "Your first look at my work. Check out my resume, as well as my personal and group coding projects.",
+            githubLink: "https://github.com/harfore/portfolio"
+        },
+        {
+            title: "Oceanflask",
+            image: "",
+            technos: "Python, Tkinter, SQLite",
+            description: "Write, save your thoughts, revisit old entries and delete the ones you want gone.",
+            githubLink: "https://github.com/harfore/oceanflask"
+        }
+    ]
 
     const GroupProjects = [
         {
@@ -40,27 +67,16 @@ export function Projects() {
         }
     ]
 
-    const PersonalProjects = [
-        {
-            title: "Hyperfunk - in progress",
-            image: "../images/hyperfunk.png",
-            technos: "HTML, CSS, JavaScript, Ticketmaster API, Postman",
-            description: "A learning student project, Hyperfunk aims to present concerts and connect live music amateurs all over the globe. Users will soon be able to set up a profile, view the world's most popular tours and look through the nearest upcoming events.",
-            githubLink: "https://github.com/harfore/hyperfunk",
-            liveDemo: "https://harfore.github.io/hyperfunk/"
-        },
-        {
-            title: "Portfolio",
-            image: "",
-            technos: "React",
-            description: "Your first look at my work. Check out my resume, as well as my personal and group coding projects.",
-            githubLink: "https://github.com/harfore/portfolio"
-        }
-    ]
-
-    const ifLiveDemo = (GroupProject) => {
+    const ifLiveDemoGroup = (GroupProject) => {
         if ('liveDemo' in GroupProject) {
             return <a href={GroupProject.liveDemo} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>Live Demo</button></a>
+        } else {
+            return null;
+        }
+    }
+    const ifLiveDemoPersonal = (PersonalProject) => {
+        if ('liveDemo' in PersonalProject) {
+            return <a href={PersonalProject.liveDemo} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>Live Demo</button></a>
         } else {
             return null;
         }
@@ -68,6 +84,19 @@ export function Projects() {
 
     return (
         <div id='projects_page'>
+            <h1>Personal Projects</h1>
+            <div className='personalProjects'>
+                {PersonalProjects.map((PersonalProject, index) => (
+                    <div className='personalProject' key={index}>
+                        <h2>{PersonalProject.title}</h2>
+                        <img className='group_project_image' src={PersonalProject.image} alt='' />
+                        <p className='project_description' >{PersonalProject.description}</p>
+                        <p>{PersonalProject.technos}</p>
+                        <a href={PersonalProject.githubLink} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>View on Github</button></a>
+                        {ifLiveDemoPersonal(PersonalProject)}
+                    </div>
+                ))}
+            </div>
             <h1>Group Projects</h1>
             <div className="groupProjects">
                 {GroupProjects.map((GroupProject, index) => (
@@ -77,22 +106,8 @@ export function Projects() {
                         <p className='project_description'>{GroupProject.description}</p>
                         <p>Languages and tools: {GroupProject.technos}</p>
                         <a href={GroupProject.githubLink} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>View on GitHub</button></a>
-                        {ifLiveDemo(GroupProject)}
+                        {ifLiveDemoGroup(GroupProject)}
                     </div>
-                ))}
-            </div>
-            <h1>Personal Projects</h1>
-            <div className='personalProjects'>
-                {PersonalProjects.map((PersonalProject, index) => (
-                    <div className='personalProject' key={index}>
-                        <h2>{PersonalProject.title}</h2>
-                        <img src={PersonalProject.image} alt='' />
-                        <p className='project_description' >{PersonalProject.description}</p>
-                        <p>{PersonalProject.technos}</p>
-                        <a href={PersonalProject.githubLink} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>View on Github</button></a>
-                        <a href={PersonalProject.liveDemo} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>Live Demo</button></a>
-                    </div>
-
                 ))}
             </div>
 
