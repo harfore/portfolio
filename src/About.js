@@ -3,6 +3,7 @@ import './About.css';
 import github from './images/github.png';
 import linkedin from './images/linkedin.png';
 import typing_gif from './images/typing_gif.gif';
+import mail from './images/mail.png';
 
 export function About() {
     return (
@@ -14,6 +15,7 @@ export function About() {
 
             <a href='https://github.com/harfore'><img className='wLink' alt="GitHub Link" src={github} /></a>
             <a href="https://linkedin.com/in/rémi-harfoush-440823255/"><img className='wLink' alt="LinkedIn Link" src={linkedin} /></a>
+            <a href="mailto:remiharfoush@gmail.com"><img className='wLink' src={mail} alt='Mail to remiharfoush@gmail.com' /></a>
         </div>
     )
 } // tout centrer

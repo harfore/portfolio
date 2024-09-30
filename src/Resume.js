@@ -53,7 +53,7 @@ export function Resume() {
             <div className="experience">
                 <h2 className='description'>Assistance Coordinator - Night Shift</h2>
                 <h2>June - September 2022 & 2023</h2>
-                <h2>AXA Assistance</h2>
+                <h2>AXA</h2>
                 <p className='description'>Telephone communications: answering queries from customers traveling in France
                     and abroad</p>
                 <p className='description' >Teamwork to find creative solutions to logistical problems</p>
