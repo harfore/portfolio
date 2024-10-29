@@ -52,12 +52,14 @@ export function Resume() {
             <h1>Professional Experience</h1>
             <div className="experience">
                 <h2 className='description'>Assistance Coordinator - Night Shift</h2>
-                <h2>June - September 2022 & 2023</h2>
+                <h2>June - September 2022, 2023, 2024</h2>
                 <h2>AXA</h2>
-                <p className='description'>Telephone communications: answering queries from customers traveling in France
-                    and abroad</p>
+                <p className='description'>Efficient coordination of complaints from 100+ customers a week travelling
+                    in France and abroad, positive feedback from management and customers</p>
                 <p className='description' >Teamwork to find creative solutions to logistical problems</p>
-                <p className='description' >Software use, file creation to leave an exhaustive paper trail</p>
+                <p>Compiling fast and accessible documentation</p>
+                <p className='description'>Compliance with internal procedures, supporting operational efficiency</p>
+
             </div>
         </div>
 

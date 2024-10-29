@@ -64,6 +64,7 @@
     overflow: hidden;
     margin: 1rem 1rem;
     vertical-align: top;
+    cursor: pointer;
 }
 
 .projectButton:hover {

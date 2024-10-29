@@ -4,7 +4,7 @@ import chaises_volantes from './images/chaises_volantes.png';
 import social_network from './images/social_network.png';
 import distractor from './images/distractor.png';
 import happy_project from './images/happy_project.png';
-import hyperfunk from './images/hyperfunk.png';
+import hyperfunk from './images/hyperfunk_home.png';
 import portfolio_image from './images/portfolio_image.png';
 
 export function Projects() {

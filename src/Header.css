@@ -10,8 +10,9 @@
 }
 
 .header nav li {
-    margin: auto 5%;
+    margin: auto;
     padding: 0.5rem 2rem;
+    cursor: pointer;
 }
 
 .header nav a {
