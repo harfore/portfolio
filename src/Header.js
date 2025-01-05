@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import './Projects';
+import './Resume';
+import './Contact'
 
 export function Header() {
     return (
-        <header className='header'>
+        <header className="header">
             <nav>
                 <ul>
-                    <li><a to='/'>HOME</a></li>
-                    <li><a to='/projects'>PROJECTS</a></li>
-                    <li><a to='/resume'>RESUME</a></li>
-                    <li><a to='/contact'>CONTACT</a></li>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/projects">PROJECTS</Link></li>
+                    <li><Link to="/resume">RESUME</Link></li>
+                    <li><Link to="/contact">CONTACT</Link></li>
                 </ul>
             </nav>
         </header>

@@ -4,62 +4,108 @@ import './Resume.css';
 export function Resume() {
     const Education = [
         {
-            title: "Computer Science - Bachelor's Degree",
-            place_and_years: "2023 - 2025, Ada Tech School - 75010 Paris",
-            place: "Ada Tech School - 75010 Paris",
-            diploma: "RNCP Level VI Diploma - Application Designer and Developer",
-            info1: "",
-            info2: ""
-
+            title: "Computer Science",
+            time: "2023 - 2026",
+            name: "Ada Tech School",
+            location: "Paris",
+            diploma: "Bachelor's Degree, RNCP Level VI Diploma - Application Designer and Developer",
+            link: "https://adatechschool.fr/programme/",
+            info: [
+                "Full-stack web application development with modern stacks",
+                "Clean code, project-based learning through peer/mob programming and agile methodology, for accelerated skills development"
+            ]
         },
         {
-            title: "International Trade and administration",
-            place_and_years: "2020 - 2023, Paris-XII University",
+            title: "International Trade and Administration",
+            time: "2020 - 2023",
+            name: "Paris-XII University",
             diploma: "Bachelor's Degree",
-            info1: "Study of economics, international trade, marketing and law",
-            info2: "Last semester: Erasmus Exchange in Prague's Czech University of Life Sciences"
+            link: "https://aei.u-pec.fr/formations/licence-administration-et-echanges-internationaux-parcours-commerce-international",
+            info: [
+                "Study of economics, international trade and marketing",
+                "Last semester: Erasmus Exchange in Prague's Czech University of Life Sciences"
+            ]
         },
         {
-            title: "British Council",
-            place_and_years: "2009 - 2019, Paris",
+            title: "British Council | University of Cambridge",
+            time: "2009 - 2019",
             place: "Paris",
-            diploma: "Cambridge Advanced English (CAE) Diploma",
-            info1: "Score: 200/210 (C2 Level)",
-            info2: "Learning the English language"
+            diploma: "C1 Advanced (formerly Cambridge Advanced English Diploma)",
+            link: "https://learnenglish.britishcouncil.org/",
+            info: [
+                "Formal certification from Cambridge English",
+                "Score: 200/210 (C2 Level)",
+                "Learning the English language"
+            ]
         },
         {
             title: "Sainte Elisabeth High School",
-            place_and_years: "2017 - 2020, Paris",
+            time: "2017 - 2020",
+            place: "Paris",
             diploma: "Economic and Social High School Diploma, awarded with high honors",
-            info1: "Class Delegate for student life (2018 - 2019)"
+            link: "https://www.sainte-elisabeth.com/",
+            info: [
+                "Class representative for student life (2018 - 2019)",
+                "Specialty: Applied Economics"
+            ]
+        }
+    ];
+
+    const Professional = [
+        {
+            title: 'Full Stack Developer',
+            company: 'Inopakt',
+            time: 'November - December 2024',
+            info: [
+                "Conception and development of a fitness app with Node.js, TypeScript, Angular and MongoDB",
+                "Application of object-oriented programming principle to build on a scalable and efficient architecture"
+            ]
+        },
+        {
+            title: "Assistance Coordinator - Night Shift",
+            company: "AXA",
+            time: "June - September 2022, 2023, 2024",
+            info: [
+                "Efficient coordination of complaints from 100+ customers a week travelling in France and abroad, positive feedback from management and customers",
+                "Compiling fast and accessible documentation",
+                "Teamwork to find creative solutions to logistical problems",
+                "Compliance with internal procedures, supporting operational efficiency"
+            ]
         }
     ]
 
     return (
         <div id='resume_page'>
             <h1>Education</h1>
-            <div id="education" >
-                {Education.map((School, index) => (
+            <div className="education" >
+                {Education.map((schoolItem, index) => (
                     <div className='school' key={index}>
-                        <h2 className='description'>{School.title}</h2>
-                        <h2>{School.place_and_years}</h2>
-                        <h3>{School.diploma}</h3>
-                        <p className='description'>{School.info1}</p>
-                        <p className='description'>{School.info2}</p>
+                        <h2 className='school-title'>{schoolItem.title}</h2>
+                        <h3>{schoolItem.time} {schoolItem.place}</h3>
+                        <h4>{schoolItem.diploma}</h4>
+                        {schoolItem.info.length > 0 && (
+                            <ul className='school-info'>
+                                {schoolItem.info.map((detail, idx) => (
+                                    <li key={idx}>{detail}</li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 ))}
             </div>
             <h1>Professional Experience</h1>
-            <div className="experience">
-                <h2 className='description'>Assistance Coordinator - Night Shift</h2>
-                <h2>June - September 2022, 2023, 2024</h2>
-                <h2>AXA</h2>
-                <p className='description'>Efficient coordination of complaints from 100+ customers a week travelling
-                    in France and abroad, positive feedback from management and customers</p>
-                <p className='description' >Teamwork to find creative solutions to logistical problems</p>
-                <p>Compiling fast and accessible documentation</p>
-                <p className='description'>Compliance with internal procedures, supporting operational efficiency</p>
-
+            <div className='experience'>
+                {Professional.map((jobItem, index) => (
+                    <div className='pro_experience' key={index}>
+                        <h2 className="pro-title">{jobItem.title} | {jobItem.company}</h2>
+                        <h3>{jobItem.time}</h3>
+                        <ul className='job-info'>
+                            {jobItem.info.map((detail, idx) => (
+                                <li key={idx}>{detail}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </div>
 

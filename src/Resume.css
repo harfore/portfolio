@@ -4,18 +4,18 @@
     padding: 1rem;
 }
 
-#education>.school,
-.experience {
+.education>.school,
+.experience>.pro_experience {
     border: 1px solid rgb(255, 255, 255);
     width: 45%;
     margin: auto;
     margin-bottom: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 .school:hover,
-.experience:hover {
+.experience>.pro_experience:hover {
     background-color: white;
     color: rgb(43, 43, 43);
     transition: background-color 0.5s, color 0.5s;
@@ -23,20 +23,28 @@
 
 .description {
     padding: 0 2rem;
+    list-style-type: none;
 }
 
 @media (max-width: 768px) {
 
-    #education>.school,
-    .experience {
+    .education>.school,
+    .experience>.pro_experience {
         width: 45%;
     }
 }
 
 @media (max-width: 480px) {
 
-    #education>.school,
-    .experience {
+    .education>.school,
+    .experience>.pro_experience {
         width: 90%;
     }
+}
+
+.school-info,
+.job-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }

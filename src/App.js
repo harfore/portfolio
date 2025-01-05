@@ -1,21 +1,26 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './Header';
-import { Footer } from './Footer';
+import { Footer } from './Contact';
 import { About } from './About';
 import { Projects } from './Projects';
 import { Resume } from './Resume';
 
 function App() {
-  const test = ""
   return (
-    <div className="App">
-      <Header />
-      <About />
-      <Projects />
-      <Resume />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/footer" element={<Footer />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

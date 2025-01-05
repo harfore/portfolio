@@ -9,7 +9,7 @@ export function About() {
     return (
         <div id="about_page">
             <img className='about_image' alt='decorative gif' src={typing_gif} />
-            <div className="typewriter">Hi! I'm Rémi, a web developer.</div>
+            <div className="typewriter">Hi! I'm Rémi, Paris' most dedicated software engineer.</div>
             <h3 className="presentation_paragraph">Currently studying at Ada Tech School in Paris, I'm looking for a year-long block release training to continue developing my coding skills.
                 I started my higher education with a bachelor's degree in International Trade, but am now interested in mastering a concrete skill: designing and conceiving web applications.</h3>
 
@@ -18,4 +18,4 @@ export function About() {
             <a href="mailto:remiharfoush@gmail.com"><img className='wLink' src={mail} alt='Mail to remiharfoush@gmail.com' /></a>
         </div>
     )
-} // tout centrer
+}
