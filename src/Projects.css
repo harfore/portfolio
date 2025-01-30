@@ -6,7 +6,7 @@
 .groupProjects,
 .personalProjects {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .groupProjects>.groupProject,
@@ -15,6 +15,11 @@
     border: 1px solid rgb(255, 255, 255);
     margin: 2rem;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .groupProject:hover {
@@ -27,6 +32,37 @@
 .personal_project_image {
     width: 100%;
     max-width: 27rem;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.project_left {
+    width: 40%;
+}
+
+.project_right {
+    width: 60%;
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.projectTechnos {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.projectTechno {
+    border: 3px solid rgb(69, 118, 255);
+    background-color: rgb(69, 118, 255);
+    border-radius: 1rem;
+    padding: 0.25rem;
+    font-weight: bold;
 }
 
 @media (max-width: 900px) {
@@ -51,10 +87,6 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
-.project_description {
-    padding: 0 2rem;
-}
-
 .projectButton {
     width: 6rem;
     height: 4rem;
@@ -62,9 +94,9 @@
     font-weight: bold;
     padding: 1rem;
     overflow: hidden;
-    margin: 1rem 1rem;
     vertical-align: top;
     cursor: pointer;
+    margin-right: 1rem;
 }
 
 .projectButton:hover {

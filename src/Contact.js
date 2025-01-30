@@ -29,7 +29,9 @@ export function Footer() {
 
     return (
         <footer className='footer'>
-
+            <a href='https://github.com/harfore'><img className='wLink' alt="GitHub Link" src={github} />L</a>
+            <a href="https://linkedin.com/in/rémi-harfoush-440823255/"><img className='wLink' alt="LinkedIn Link" src={linkedin} />S</a>
+            <a href="mailto:remiharfoush@gmail.com"><img className='wLink' src={mail} alt='Mail to remiharfoush@gmail.com' />R</a>
         </footer>
     )
 }
