@@ -76,6 +76,20 @@ export function Resume() {
 
     return (
         <div id='resume_page'>
+            <h1>Professional Experience</h1>
+            <div className='experience'>
+                {Professional.map((jobItem, index) => (
+                    <div className='pro_experience' key={index}>
+                        <h2 className="pro-title">{jobItem.title} | {jobItem.company}</h2>
+                        <h3>{jobItem.time}</h3>
+                        <ul className='job-info'>
+                            {jobItem.info.map((detail, idx) => (
+                                <li key={idx}>{detail}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
             <h1>Education</h1>
             <div className="education" >
                 {Education.map((schoolItem, index) => (
@@ -90,20 +104,6 @@ export function Resume() {
                                 ))}
                             </ul>
                         )}
-                    </div>
-                ))}
-            </div>
-            <h1>Professional Experience</h1>
-            <div className='experience'>
-                {Professional.map((jobItem, index) => (
-                    <div className='pro_experience' key={index}>
-                        <h2 className="pro-title">{jobItem.title} | {jobItem.company}</h2>
-                        <h3>{jobItem.time}</h3>
-                        <ul className='job-info'>
-                            {jobItem.info.map((detail, idx) => (
-                                <li key={idx}>{detail}</li>
-                            ))}
-                        </ul>
                     </div>
                 ))}
             </div>

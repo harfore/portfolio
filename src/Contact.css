@@ -1,7 +1,11 @@
 .footer {
     background-color: rgb(43, 43, 43);
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin: auto;
 }
 
 .footer nav ul {
@@ -37,4 +41,32 @@
     text-align: center;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.canal_description {
+    position: fixed;
+    left: 50%;
+    top: 12rem;
+    transform: translateX(-50%);
+    background-color: rgb(71, 134, 223);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    width: auto;
+    text-align: center;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.footer>div {
+    position: relative;
+    display: inline-block;
+}
+
+.footer>div:hover .canal_description {
+    height: 6rem;
+    opacity: 1;
 }

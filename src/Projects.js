@@ -89,12 +89,12 @@ export function Projects() {
             <div className='personalProjects'>
                 {PersonalProjects.map((PersonalProject, index) => (
                     <div className='personalProject' key={index}>
-                        <h2>{PersonalProject.title}</h2>
                         <div className='project'>
                             <div className='project_left'>
                                 <img className='group_project_image' src={PersonalProject.image} alt='' />
                             </div>
                             <div className='project_right'>
+                                <h2>{PersonalProject.title}</h2>
                                 <p className='project_description' >{PersonalProject.description}</p>
                                 <div className='projectTechnos'>
                                     {PersonalProject.technos.map((techno, index) => (
@@ -112,12 +112,12 @@ export function Projects() {
             <div className="groupProjects">
                 {GroupProjects.map((GroupProject, index) => (
                     <div className='groupProject' key={index}>
-                        <h2>{GroupProject.title}</h2>
                         <div className='project'>
                             <div className='project_left'>
                                 <img className='group_project_image' src={GroupProject.image} alt='' />
                             </div>
                             <div className='project_right'>
+                                <h2>{GroupProject.title}</h2>
                                 <p className='project_description'>{GroupProject.description}</p>
                                 <div className='projectTechnos'>
                                     {GroupProject.technos.map((techno, index) => (
