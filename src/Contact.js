@@ -39,6 +39,7 @@ export function Contact() {
                         </div>
                         <div>
                             <p className='canal_description'>{Canal.description}</p>
+
                         </div>
                     </div>
                 ))}
