@@ -11,18 +11,25 @@
 
 .groupProjects>.groupProject,
 .personalProjects>.personalProject {
-    flex: 1 0 35%;
+    flex: 1 0 100%;
     border: 1px solid rgb(255, 255, 255);
     margin: 2rem;
     min-width: 300px;
     display: flex;
     flex-direction: column;
     height: 15em;
-    padding: 20px;
     box-sizing: border-box;
+    background-clip: content-box;
+    background-color: transparent;
 }
 
-.groupProject:hover {
+.groupProject-content,
+.personalProject-content {
+    padding: 1rem;
+}
+
+.groupProject:hover,
+.personalProject:hover {
     background-color: white;
     color: rgb(43, 43, 43);
     transition: background-color 0.5s, color 0.5s;
@@ -30,7 +37,7 @@
 
 .group_project_image,
 .personal_project_image {
-    width: 100%;
+    width: 90%;
     max-width: 27rem;
     border-radius: 1rem;
     margin: 0 1rem 1rem 1rem;
@@ -38,15 +45,16 @@
 
 .project {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .project_left {
-    width: 40%;
+    width: 100%;
 }
 
 .project_right {
-    width: 60%;
+    width: 100%;
     text-align: left;
     padding: 0 2rem;
 }
@@ -55,6 +63,8 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .projectTechno {
@@ -63,28 +73,6 @@
     border-radius: 1rem;
     padding: 0.25rem;
     font-weight: bold;
-}
-
-@media (max-width: 900px) {
-
-    .groupProjects>.groupProject,
-    .personalProjects>.personalProject {
-        flex: 1 0 50%;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .groupProjects .groupProject,
-    .personalProjects>.personalProject {
-        flex: 1 0 100%;
-    }
-}
-
-.personalProject:hover {
-    background-color: white;
-    color: rgb(43, 43, 43);
-    transition: background-color 0.5s, color 0.5s;
 }
 
 .projectButton {
@@ -103,4 +91,38 @@
     color: rgb(43, 43, 43);
     width: 9rem;
     transition: width 0.3s;
+}
+
+.project_description {
+    width: 90%;
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+
+    .groupProjects>.groupProject,
+    .personalProjects>.personalProject {
+        flex: 1 0 50%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 900px) {
+
+    .groupProjects>.groupProject,
+    .personalProjects>.personalProject {
+        flex: 1 0 35%;
+    }
+
+    .project {
+        flex-direction: row;
+    }
+
+    .project_left {
+        width: 40%;
+    }
+
+    .project_right {
+        width: 60%;
+    }
 }

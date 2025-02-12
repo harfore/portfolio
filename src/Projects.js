@@ -89,20 +89,22 @@ export function Projects() {
             <div className='personalProjects'>
                 {PersonalProjects.map((PersonalProject, index) => (
                     <div className='personalProject' key={index}>
-                        <div className='project'>
-                            <div className='project_left'>
-                                <img className='group_project_image' src={PersonalProject.image} alt='' />
-                            </div>
-                            <div className='project_right'>
-                                <h2>{PersonalProject.title}</h2>
-                                <p className='project_description' >{PersonalProject.description}</p>
-                                <div className='projectTechnos'>
-                                    {PersonalProject.technos.map((techno, index) => (
-                                        <p key={index} className='projectTechno'> {techno}</p>
-                                    ))}
+                        <div className='personalProject-content'>
+                            <div className='project'>
+                                <div className='project_left'>
+                                    <img className='group_project_image' src={PersonalProject.image} alt='' />
                                 </div>
-                                <a href={PersonalProject.githubLink} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>View on Github</button></a>
-                                {ifLiveDemoPersonal(PersonalProject)}
+                                <div className='project_right'>
+                                    <h2>{PersonalProject.title}</h2>
+                                    <p className='project_description' >{PersonalProject.description}</p>
+                                    <div className='projectTechnos'>
+                                        {PersonalProject.technos.map((techno, index) => (
+                                            <p key={index} className='projectTechno'> {techno}</p>
+                                        ))}
+                                    </div>
+                                    <a href={PersonalProject.githubLink} target='_blank' rel='noopener noreferrer' ><button className='projectButton' type='button'>View on Github</button></a>
+                                    {ifLiveDemoPersonal(PersonalProject)}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -112,20 +114,22 @@ export function Projects() {
             <div className="groupProjects">
                 {GroupProjects.map((GroupProject, index) => (
                     <div className='groupProject' key={index}>
-                        <div className='project'>
-                            <div className='project_left'>
-                                <img className='group_project_image' src={GroupProject.image} alt='' />
-                            </div>
-                            <div className='project_right'>
-                                <h2>{GroupProject.title}</h2>
-                                <p className='project_description'>{GroupProject.description}</p>
-                                <div className='projectTechnos'>
-                                    {GroupProject.technos.map((techno, index) => (
-                                        <p key={index} className='projectTechno'> {techno}</p>
-                                    ))}
+                        <div class="groupProject-content">
+                            <div className='project'>
+                                <div className='project_left'>
+                                    <img className='group_project_image' src={GroupProject.image} alt='' />
                                 </div>
-                                <a href={GroupProject.githubLink} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>View on GitHub</button></a>
-                                {ifLiveDemoGroup(GroupProject)}
+                                <div className='project_right'>
+                                    <h2>{GroupProject.title}</h2>
+                                    <p className='project_description'>{GroupProject.description}</p>
+                                    <div className='projectTechnos'>
+                                        {GroupProject.technos.map((techno, index) => (
+                                            <p key={index} className='projectTechno'> {techno}</p>
+                                        ))}
+                                    </div>
+                                    <a href={GroupProject.githubLink} target='_blank' rel='noopener noreferrer'><button className='projectButton' type='button'>View on GitHub</button></a>
+                                    {ifLiveDemoGroup(GroupProject)}
+                                </div>
                             </div>
                         </div>
                     </div>
