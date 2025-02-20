@@ -17,7 +17,7 @@ export function Projects() {
             technos: ["ReactJS", "PostgreSQL", "Node.js", "Express"],
             description: "A learning student project, Hyperfunk aims to present concerts and connect live music amateurs all over the globe. Users will soon be able to set up a profile, view the world's most popular tours and look through the nearest upcoming events.",
             githubLink: "https://github.com/harfore/hyperfunk",
-            liveDemo: "https://harfore.github.io/hyperfunk/"
+            liveDemo: "https://hyperfunk.vercel.app/"
         },
         {
             title: "Oceanflask",
