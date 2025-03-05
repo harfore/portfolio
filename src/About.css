@@ -4,9 +4,12 @@
     background: url(./images/mesh-gradient.png);
     padding: 1rem;
     overflow: hidden;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    height: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 body {
@@ -22,14 +25,30 @@ body {
 .presentation_paragraph {
     width: 100%;
     max-width: 40rem;
-    font-size: 1.2rem;
-    height: auto;
-    padding-bottom: 2 rem;
-    margin: auto;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+.typewriter_mobile {
+    display: block;
+    font-size: 0.9rem;
+    overflow: hidden;
+    border-right: 0.15em solid rgb(75, 135, 221);
+    white-space: nowrap;
+    margin: 2vw auto;
+    letter-spacing: 0.15em;
+    animation:
+        typing 4.2s steps(40, end),
+        blink-caret .75s step-end infinite;
+    font-weight: 700;
 }
 
 .typewriter {
-    font-size: 2rem;
+    display: none;
+    font-size: 1.5rem;
     overflow: hidden;
     border-right: 0.15em solid rgb(75, 135, 221);
     white-space: nowrap;
@@ -39,6 +58,26 @@ body {
         typing 4.2s steps(40, end),
         blink-caret .75s step-end infinite;
 }
+
+/* .typewriter-line {
+    overflow: hidden;
+    border-right: 0.15em solid rgb(75, 135, 221);
+    white-space: nowrap;
+    display: none;
+    animation: typing 4.2s steps(40, end) forwards, blink-caret .75s step-end infinite;
+    display: block;
+    font-weight: 600;
+}
+
+.typewriter-line:nth-child(1) {
+    animation-delay: 0s;
+    display: block;
+}
+
+.typewriter-line:nth-child(2) {
+    animation-delay: 2s;
+    display: block;
+} */
 
 @keyframes typing {
     0% {
@@ -81,4 +120,28 @@ body {
 .wLink:hover {
     color: rgb(133, 133, 133);
     top: -1vw;
+}
+
+@media (min-width: 769px) {
+    #about_page {
+        justify-content: space-between;
+    }
+
+    .typewriter {
+        display: block;
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+    .typewriter_mobile {
+        display: none;
+    }
+
+    .presentation_paragraph {
+        font-size: 1.2rem;
+    }
+
+    .about_image {
+        max-width: 30rem;
+    }
 }

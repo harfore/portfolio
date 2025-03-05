@@ -7,6 +7,7 @@ import happy_project from './images/happy_project.png';
 import hyperfunk from './images/hyperfunk_home.png';
 import oceanflask from './images/oceanflask.png';
 import portfolio_image from './images/portfolio_image.png';
+import amjad from "./images/amjad.png"
 
 export function Projects() {
 
@@ -25,6 +26,14 @@ export function Projects() {
             technos: ["Python (Flask)", "SQLite"],
             description: "Write, save your thoughts, revisit old entries and delete the ones you want gone.",
             githubLink: "https://github.com/harfore/oceanflask"
+        },
+        {
+            title: "Amjad Janjoun",
+            image: amjad,
+            technos: ["Next.js", "Tailwind CSS"],
+            description: "Porfolio with a slick and minimalist design to showcase fashion creations.",
+            githubLink: "https://github.com/harfore/A-J",
+            liveDemo: "https://amjadjanjoun.vercel.app/"
         },
         {
             title: "Portfolio",
@@ -47,7 +56,7 @@ export function Projects() {
         {
             title: "Social Network",
             image: social_network,
-            technos: ["HTML", "CSS", "PHP", "MySQL", "MariaDB"],
+            technos: ["PHP", "CSS", "HTML", "MySQL", "MariaDB"],
             description: "This social network is a platform that allows users to register and login. They can explore the different pages, like posts and follow users but they can also post messages.",
             githubLink: "https://github.com/harfore/Social-Network"
         },
