@@ -28,7 +28,7 @@ export function Projects() {
             githubLink: "https://github.com/harfore/oceanflask"
         },
         {
-            title: "Amjad Janjoun",
+            title: "Amjad Janjoun - in progress",
             image: amjad,
             technos: ["Next.js", "Tailwind CSS"],
             description: "Porfolio with a slick and minimalist design to showcase fashion creations.",
